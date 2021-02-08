@@ -49,3 +49,8 @@ app.*.map.json
 # ios
 /ios
 /web 
+
+# 
+/integration_test
+/test
+
