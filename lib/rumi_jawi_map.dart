@@ -1,3 +1,5 @@
+//  version 1.0 8/2/2021
+
 var myRumiJawi = {
   'aba': 'اب',
   'aba-aba': 'اب٢',
@@ -40061,9 +40063,9 @@ var myRumiJawi = {
   'penyaliran': 'ڤڽاليرن',
   'saliran': 'ساليرن',
   'sesaliran': 'سساليرن',
-  'salji': 'لجي',
-  'salju': 'لجو',
-  'sallallahualaihiwasallam': 'صلىالل­هعليهوسلم',
+  'salji': 'سلجي',
+  'salju': 'سلجو',
+  'sallallahualaihiwasallam': 'صلىاللهعليهوسلم',
   'salmon': 'سلمون',
   'salmonela': 'سلمونيلا',
   'salon': 'سالون',
