@@ -35,15 +35,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   String dropdownValue = 'One';
-  String rumi;
-  Map rj;
+  String rumi = 'rumi';
+  Map rj = Map();
+
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    // rumiJawi(rumi);
+  }
+
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Rumi 2 Jawi'),
+        title: Text('Rumi kepada Jawi'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -114,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(20.0),
               child: RichText(
                 text: TextSpan(
-                    text: rj.toString(),
+                    text: rj.toString() ?? '<no value>',
                     style: TextStyle(fontSize: 20.0, color: Colors.black)),
               ),
             ),
@@ -168,7 +177,7 @@ String rumiJawi(rumi) {
 }
 
 Map rumiJawiOther(rumi) {
-  var r = Map();
+  var rj = Map();
 
 
 
@@ -186,23 +195,25 @@ Map rumiJawiOther(rumi) {
   String nya = '${rumi}nya';
   String ter = 'ter$rumi';
   String berke = 'berke$rumi';
+  String mengKan = 'meng${rumi}kan';
 
   myRumiJawi.keys.forEach((element) {
-    if (element.contains(ber)) r[element] = myRumiJawi[element];
-    if (element.contains(memper)) r[element] = myRumiJawi[element];
-    if (element.contains(diper)) r[element] = myRumiJawi[element];
-    if (element.contains(pemAn)) r[element] = myRumiJawi[element];
-    if (element.contains(pem)) r[element] = myRumiJawi[element];
-    if (element.contains(perse)) r[element] = myRumiJawi[element];
-    if (element.contains(an)) r[element] = myRumiJawi[element];
-    if (element.contains(ke)) r[element] = myRumiJawi[element];
-    if (element.contains(keAn)) r[element] = myRumiJawi[element];
-    if (element.contains(pe)) r[element] = myRumiJawi[element];
-    if (element.contains(nya)) r[element] = myRumiJawi[element];
-    if (element.contains(ter)) r[element] = myRumiJawi[element];
-    if (element.contains(berke)) r[element] = myRumiJawi[element];
-    if (element.contains(diKan)) r[element] = myRumiJawi[element];
+    if (element.contains(ber)) rj[element] = myRumiJawi[element];
+    if (element.contains(memper)) rj[element] = myRumiJawi[element];
+    if (element.contains(diper)) rj[element] = myRumiJawi[element];
+    if (element.contains(pemAn)) rj[element] = myRumiJawi[element];
+    if (element.contains(pem)) rj[element] = myRumiJawi[element];
+    if (element.contains(perse)) rj[element] = myRumiJawi[element];
+    if (element.contains(an)) rj[element] = myRumiJawi[element];
+    if (element.contains(ke)) rj[element] = myRumiJawi[element];
+    if (element.contains(keAn)) rj[element] = myRumiJawi[element];
+    if (element.contains(pe)) rj[element] = myRumiJawi[element];
+    if (element.contains(nya)) rj[element] = myRumiJawi[element];
+    if (element.contains(ter)) rj[element] = myRumiJawi[element];
+    if (element.contains(berke)) rj[element] = myRumiJawi[element];
+    if (element.contains(diKan)) rj[element] = myRumiJawi[element];
+    if (element.contains(mengKan)) rj[element] = myRumiJawi[element];
   });
 
-  return r;
+  return rj;
 }
